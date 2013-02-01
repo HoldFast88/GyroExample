@@ -1,0 +1,316 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8A0918A816B056DC00FA25AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0918A716B056DC00FA25AB /* UIKit.framework */; };
+		8A0918AA16B056DC00FA25AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0918A916B056DC00FA25AB /* Foundation.framework */; };
+		8A0918AC16B056DC00FA25AB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0918AB16B056DC00FA25AB /* CoreGraphics.framework */; };
+		8A9FDEB416BBCFE30074EF9C /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A9FDEB316BBCFE30074EF9C /* CoreMotion.framework */; };
+		8A9FDECA16BC13F10074EF9C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A9FDEBB16BC13F10074EF9C /* AppDelegate.m */; };
+		8A9FDECB16BC13F10074EF9C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A9FDEBC16BC13F10074EF9C /* Default-568h@2x.png */; };
+		8A9FDECC16BC13F10074EF9C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A9FDEBD16BC13F10074EF9C /* Default.png */; };
+		8A9FDECD16BC13F10074EF9C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A9FDEBE16BC13F10074EF9C /* Default@2x.png */; };
+		8A9FDECE16BC13F10074EF9C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A9FDEBF16BC13F10074EF9C /* InfoPlist.strings */; };
+		8A9FDECF16BC13F10074EF9C /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A9FDEC116BC13F10074EF9C /* ViewController_iPad.xib */; };
+		8A9FDED016BC13F10074EF9C /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A9FDEC316BC13F10074EF9C /* ViewController_iPhone.xib */; };
+		8A9FDED116BC13F10074EF9C /* GyroExample-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A9FDEC516BC13F10074EF9C /* GyroExample-Info.plist */; };
+		8A9FDED216BC13F10074EF9C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A9FDEC716BC13F10074EF9C /* main.m */; };
+		8A9FDED316BC13F10074EF9C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A9FDEC916BC13F10074EF9C /* ViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8A0918A316B056DC00FA25AB /* GyroExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GyroExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A0918A716B056DC00FA25AB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8A0918A916B056DC00FA25AB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8A0918AB16B056DC00FA25AB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8A79A46016B2C26800D49E5F /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		8A9FDEB316BBCFE30074EF9C /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		8A9FDEBA16BC13F10074EF9C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8A9FDEBB16BC13F10074EF9C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8A9FDEBC16BC13F10074EF9C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		8A9FDEBD16BC13F10074EF9C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		8A9FDEBE16BC13F10074EF9C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		8A9FDEC016BC13F10074EF9C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8A9FDEC216BC13F10074EF9C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		8A9FDEC416BC13F10074EF9C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		8A9FDEC516BC13F10074EF9C /* GyroExample-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GyroExample-Info.plist"; sourceTree = "<group>"; };
+		8A9FDEC616BC13F10074EF9C /* GyroExample-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GyroExample-Prefix.pch"; sourceTree = "<group>"; };
+		8A9FDEC716BC13F10074EF9C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8A9FDEC816BC13F10074EF9C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8A9FDEC916BC13F10074EF9C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8A0918A016B056DC00FA25AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A9FDEB416BBCFE30074EF9C /* CoreMotion.framework in Frameworks */,
+				8A0918A816B056DC00FA25AB /* UIKit.framework in Frameworks */,
+				8A0918AA16B056DC00FA25AB /* Foundation.framework in Frameworks */,
+				8A0918AC16B056DC00FA25AB /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8A09189816B056DC00FA25AB = {
+			isa = PBXGroup;
+			children = (
+				8A9FDEB916BC13F10074EF9C /* GyroExample */,
+				8A0918A616B056DC00FA25AB /* Frameworks */,
+				8A0918A416B056DC00FA25AB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8A0918A416B056DC00FA25AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A0918A316B056DC00FA25AB /* GyroExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8A0918A616B056DC00FA25AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A9FDEB316BBCFE30074EF9C /* CoreMotion.framework */,
+				8A79A46016B2C26800D49E5F /* CoreFoundation.framework */,
+				8A0918A716B056DC00FA25AB /* UIKit.framework */,
+				8A0918A916B056DC00FA25AB /* Foundation.framework */,
+				8A0918AB16B056DC00FA25AB /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8A9FDEB916BC13F10074EF9C /* GyroExample */ = {
+			isa = PBXGroup;
+			children = (
+				8A9FDEBC16BC13F10074EF9C /* Default-568h@2x.png */,
+				8A9FDEBD16BC13F10074EF9C /* Default.png */,
+				8A9FDEBE16BC13F10074EF9C /* Default@2x.png */,
+				8A9FDEBA16BC13F10074EF9C /* AppDelegate.h */,
+				8A9FDEBB16BC13F10074EF9C /* AppDelegate.m */,
+				8A9FDEC816BC13F10074EF9C /* ViewController.h */,
+				8A9FDEC916BC13F10074EF9C /* ViewController.m */,
+				8A9FDEC116BC13F10074EF9C /* ViewController_iPad.xib */,
+				8A9FDEC316BC13F10074EF9C /* ViewController_iPhone.xib */,
+				8A9FDEC516BC13F10074EF9C /* GyroExample-Info.plist */,
+				8A9FDEC616BC13F10074EF9C /* GyroExample-Prefix.pch */,
+				8A9FDEBF16BC13F10074EF9C /* InfoPlist.strings */,
+				8A9FDEC716BC13F10074EF9C /* main.m */,
+			);
+			path = GyroExample;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8A0918A216B056DC00FA25AB /* GyroExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A0918CA16B056DC00FA25AB /* Build configuration list for PBXNativeTarget "GyroExample" */;
+			buildPhases = (
+				8A09189F16B056DC00FA25AB /* Sources */,
+				8A0918A016B056DC00FA25AB /* Frameworks */,
+				8A0918A116B056DC00FA25AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GyroExample;
+			productName = GyroExample;
+			productReference = 8A0918A316B056DC00FA25AB /* GyroExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8A09189A16B056DC00FA25AB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Alexey Voitenko";
+			};
+			buildConfigurationList = 8A09189D16B056DC00FA25AB /* Build configuration list for PBXProject "GyroExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8A09189816B056DC00FA25AB;
+			productRefGroup = 8A0918A416B056DC00FA25AB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8A0918A216B056DC00FA25AB /* GyroExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8A0918A116B056DC00FA25AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A9FDECB16BC13F10074EF9C /* Default-568h@2x.png in Resources */,
+				8A9FDECC16BC13F10074EF9C /* Default.png in Resources */,
+				8A9FDECD16BC13F10074EF9C /* Default@2x.png in Resources */,
+				8A9FDECE16BC13F10074EF9C /* InfoPlist.strings in Resources */,
+				8A9FDECF16BC13F10074EF9C /* ViewController_iPad.xib in Resources */,
+				8A9FDED016BC13F10074EF9C /* ViewController_iPhone.xib in Resources */,
+				8A9FDED116BC13F10074EF9C /* GyroExample-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8A09189F16B056DC00FA25AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A9FDECA16BC13F10074EF9C /* AppDelegate.m in Sources */,
+				8A9FDED216BC13F10074EF9C /* main.m in Sources */,
+				8A9FDED316BC13F10074EF9C /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8A9FDEBF16BC13F10074EF9C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A9FDEC016BC13F10074EF9C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8A9FDEC116BC13F10074EF9C /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A9FDEC216BC13F10074EF9C /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		8A9FDEC316BC13F10074EF9C /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A9FDEC416BC13F10074EF9C /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8A0918C816B056DC00FA25AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8A0918C916B056DC00FA25AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8A0918CB16B056DC00FA25AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Taras Filatov (6AVH4TA956)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GyroExample/GyroExample-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/GyroExample/GyroExample-Info.plist";
+				PRODUCT_NAME = GyroExample;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8051AFB2-B2D6-4F54-86F7-465107A82ED7";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8A0918CC16B056DC00FA25AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Taras Filatov (6AVH4TA956)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GyroExample/GyroExample-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/GyroExample/GyroExample-Info.plist";
+				PRODUCT_NAME = GyroExample;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8051AFB2-B2D6-4F54-86F7-465107A82ED7";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8A09189D16B056DC00FA25AB /* Build configuration list for PBXProject "GyroExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A0918C816B056DC00FA25AB /* Debug */,
+				8A0918C916B056DC00FA25AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A0918CA16B056DC00FA25AB /* Build configuration list for PBXNativeTarget "GyroExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A0918CB16B056DC00FA25AB /* Debug */,
+				8A0918CC16B056DC00FA25AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8A09189A16B056DC00FA25AB /* Project object */;
+}
