@@ -50,15 +50,20 @@
 	blueFloat = 0.0;
 	
 	CMMotionManager* manager = [[CMMotionManager alloc] init];
-	manager.gyroUpdateInterval = .04;
+	manager.gyroUpdateInterval = .0001;
 	
 	NSOperationQueue* queue = [NSOperationQueue mainQueue];
 	
+	UIGraphicsBeginImageContext(imageView.frame.size);
+	[imageView.image drawInRect:CGRectMake(0, 0, imageView.frame.size.width, imageView.frame.size.height)];
+	CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
+	CGContextSetLineWidth(UIGraphicsGetCurrentContext(), 4.0);
+	
 	[manager startGyroUpdatesToQueue:queue withHandler:^(CMGyroData *gyroData, NSError *error) {
-//		NSLog(@"x = %f \n y = %f \n z = %f", gyroData.rotationRate.x, gyroData.rotationRate.y, gyroData.rotationRate.z);
+		//		NSLog(@"x = %f \n y = %f \n z = %f", gyroData.rotationRate.x, gyroData.rotationRate.y, gyroData.rotationRate.z);
 		float frstVal = gyroData.rotationRate.x;
 		float scndVal = gyroData.rotationRate.y;
-//		float thrdVal = gyroData.rotationRate.z;
+		//		float thrdVal = gyroData.rotationRate.z; // changing in case rotating device around axis, perpendecular device's screen surface
 		
 		CGPoint center = runningButton.center;
 		center = CGPointMake(center.x + scndVal*30, center.y + frstVal*30);
@@ -71,17 +76,13 @@
 		if (!canDraw)
 			return;
 		
-		UIGraphicsBeginImageContext(imageView.frame.size);
-		[imageView.image drawInRect:CGRectMake(0, 0, imageView.frame.size.width, imageView.frame.size.height)];
-		CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
-		CGContextSetLineWidth(UIGraphicsGetCurrentContext(), 4.0);
 		CGContextSetRGBStrokeColor(UIGraphicsGetCurrentContext(), redFloat, greenFloat, blueFloat, 1.0);
 		CGContextBeginPath(UIGraphicsGetCurrentContext());
 		CGContextMoveToPoint(UIGraphicsGetCurrentContext(), lastPoint.x, lastPoint.y);
 		CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), currentPoint.x, currentPoint.y);
 		CGContextStrokePath(UIGraphicsGetCurrentContext());
 		imageView.image = UIGraphicsGetImageFromCurrentImageContext();
-		UIGraphicsEndImageContext();
+		//		UIGraphicsEndImageContext(); // drawing is potentually endless, so we don't need to end context
 	}];
 }
 
