@@ -50,7 +50,8 @@
 	blueFloat = 0.0;
 	
 	CMMotionManager* manager = [[CMMotionManager alloc] init];
-	manager.gyroUpdateInterval = .0001;
+//	manager.gyroUpdateInterval = .0001;
+	manager.accelerometerUpdateInterval = .0001;
 	
 	NSOperationQueue* queue = [NSOperationQueue mainQueue];
 	
@@ -59,14 +60,13 @@
 	CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
 	CGContextSetLineWidth(UIGraphicsGetCurrentContext(), 4.0);
 	
-	[manager startGyroUpdatesToQueue:queue withHandler:^(CMGyroData *gyroData, NSError *error) {
-		//		NSLog(@"x = %f \n y = %f \n z = %f", gyroData.rotationRate.x, gyroData.rotationRate.y, gyroData.rotationRate.z);
-		float frstVal = gyroData.rotationRate.x;
-		float scndVal = gyroData.rotationRate.y;
-		//		float thrdVal = gyroData.rotationRate.z; // changing in case rotating device around axis, perpendecular device's screen surface
+	[manager startAccelerometerUpdatesToQueue:queue withHandler:^(CMAccelerometerData *accelerometerData, NSError *error) {
+		float firstVal = accelerometerData.acceleration.x;
+		float secondVal = accelerometerData.acceleration.y;
+		float thirdVal = accelerometerData.acceleration.z;
 		
 		CGPoint center = runningButton.center;
-		center = CGPointMake(center.x + scndVal*30, center.y + frstVal*30);
+		center = CGPointMake(center.x + firstVal*30, center.y - secondVal*30);
 		if (center.x > 0 && center.x < imageView.frame.size.width && center.y > 0 && center.y < imageView.frame.size.height)
 			runningButton.center = center;
 		
@@ -76,6 +76,7 @@
 		if (!canDraw)
 			return;
 		
+		CGContextSetLineWidth(UIGraphicsGetCurrentContext(), fabsf(thirdVal) * 2.0); // thickness of drawing line depends of z (vertical) axis accelerate
 		CGContextSetRGBStrokeColor(UIGraphicsGetCurrentContext(), redFloat, greenFloat, blueFloat, 1.0);
 		CGContextBeginPath(UIGraphicsGetCurrentContext());
 		CGContextMoveToPoint(UIGraphicsGetCurrentContext(), lastPoint.x, lastPoint.y);
@@ -83,7 +84,34 @@
 		CGContextStrokePath(UIGraphicsGetCurrentContext());
 		imageView.image = UIGraphicsGetImageFromCurrentImageContext();
 		//		UIGraphicsEndImageContext(); // drawing is potentually endless, so we don't need to end context
+
 	}];
+//	[manager startGyroUpdatesToQueue:queue withHandler:^(CMGyroData *gyroData, NSError *error) {
+//		//		NSLog(@"x = %f \n y = %f \n z = %f", gyroData.rotationRate.x, gyroData.rotationRate.y, gyroData.rotationRate.z);
+//		float frstVal = gyroData.rotationRate.x;
+//		float scndVal = gyroData.rotationRate.y;
+//		//		float thrdVal = gyroData.rotationRate.z; // changing in case rotating device around axis, perpendecular device's screen surface
+//		
+//		CGPoint center = runningButton.center;
+//		center = CGPointMake(center.x + scndVal*30, center.y + frstVal*30);
+//		if (center.x > 0 && center.x < imageView.frame.size.width && center.y > 0 && center.y < imageView.frame.size.height)
+//			runningButton.center = center;
+//		
+//		CGPoint currentPoint = runningButton.center;
+//		lastPoint = currentPoint;
+//		
+//		if (!canDraw)
+//			return;
+//
+//		CGContextSetLineWidth(UIGraphicsGetCurrentContext(), 4.0);
+//		CGContextSetRGBStrokeColor(UIGraphicsGetCurrentContext(), redFloat, greenFloat, blueFloat, 1.0);
+//		CGContextBeginPath(UIGraphicsGetCurrentContext());
+//		CGContextMoveToPoint(UIGraphicsGetCurrentContext(), lastPoint.x, lastPoint.y);
+//		CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), currentPoint.x, currentPoint.y);
+//		CGContextStrokePath(UIGraphicsGetCurrentContext());
+//		imageView.image = UIGraphicsGetImageFromCurrentImageContext();
+//		//		UIGraphicsEndImageContext(); // drawing is potentually endless, so we don't need to end context
+//	}];
 }
 
 #pragma mark -
